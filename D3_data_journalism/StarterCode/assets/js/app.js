@@ -173,7 +173,7 @@ d3.csv("./data.csv").then(function (data) {
         .text("Obese (%)");
 
     // updateToolTip
-    circlesGroup = updateToolTip(chosenX, chosenY, circlesGroup);
+    circlesGroup = updateToolTip(chosenX, circlesGroup);
 
     labelsGroup.selectAll("text")
         .on("click", function () {
@@ -224,6 +224,6 @@ d3.csv("./data.csv").then(function (data) {
                 }
             }
         })
+}).catch(function (error) {
+    console.log(error);
 });
-    // .catch(function (error) {
-    // console.log(error)
